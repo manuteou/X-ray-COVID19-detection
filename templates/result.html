@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+<body>
+    
+    <h1 class="toto boldu centered" >Résultat de l'analyse</h1>
+    
+    <img class="result_image" src=static/{{images}} alt="image de resultat"/>
+    <img class="result_image" src=static/{{images_or}} alt="image d'origine'"/>
+    <br/>
+    <div class="toto boldu centered">La radio est predite comme un cas:</div>
+    {% if prediction == 'Negatif COVID/Pneumonie'%} 
+    <div class="result_ok boldu centered police_result">
+    {% else  %}
+    <div class ="result_ko centered police_result">
+    {% endif %}
+    {{prediction}}</div>
+</body> 
+{% endblock %}

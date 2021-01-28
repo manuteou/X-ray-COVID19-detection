@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<body> 
+    <h1>AIDE A LA DETECTION DU COVID</h1>
+    <img src="static/images/image.png" alt="image de presentation"/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="toto boldu centered">Ce site permet de fournir une aide à la detection des cas COVID<br/>
+    Il utilise le deeplearning pour predire si la radio est un cas COVID, une PNEUMONIE VIRAL<br/>
+    ATTENTION ceci est une aide au diagnostique, l'avis d'un médecin est nécessaire et obligatoire.</div>
+    <br/>
+    <form class ="centered" action="/upload" method="POST" enctype = "multipart/form-data">
+        <label for="radio" class="toto boldu tata">Telechargez votre radio en format png ou jpg</label>
+        <br/>
+        <br/>
+        <input type="file" name="radio" id="radio" accept=".png, .jpg, .jpeg"/>
+        <input type="submit"  value="predict"/>
+    </form>
+    <div class="loader" style="display:none;"></div>
+    <br/>
+    <br/>
+
+    <table class ="centered_box" id="info">
+        <caption> INFO COVID du {{date}}</caption>
+        <tr>
+            <td>Cas confirmés</td>
+            <td class="result_cell">{{case}}</td>
+        </tr>
+        <tr>
+            <td>Patients Hospitalisés</td>
+            <td class="result_cell">{{hosp}}</td>
+        </tr>
+        <tr>
+            <td>Nouvelle hospitalisation</td>
+            <td class="result_cell">{{new}}</td>
+        </tr>
+        <tr>
+            <td>Occupation réanimation</td>
+            <td class="result_cell">{{rea}}</td>
+        </tr>
+    </table>
+</body> 
+{% endblock %}

@@ -1,0 +1,13 @@
+body {background-color:#777070;}
+h1 {text-align: center; color:rgb(134, 3, 3);}
+img {display:block; margin-left:auto; margin-right:auto; width:50%; }
+.toto {color:black;}
+.boldu {font-weight:bold;}
+.result_ko {color:rgb(134, 3, 3);}
+.result_ok {color:rgb(3, 85, 3);}
+table{border: 1px solid black;border-collapse:collapse}
+.centered_box{margin-left: auto;margin-right: auto;}
+.centered{text-align: center}
+.result_image{max-width: 400px;max-height: 400px;}
+.police_result{font-size: 40px;font-weight: bold;}
+.result_cell{text-align: right}
