@@ -1,4 +1,4 @@
-# X-ray-COVID19-detection
+<h1><font color=red><strong><div align="center">X-ray-COVID19-detection <strong></font><h1></div>
 <div align="center"><img src="https://media.lactualite.com/2020/03/b93f0a42-2871.jpg" alt="drawing" width="300"/></br>
 X-ray COVID19 detection
 
@@ -14,4 +14,4 @@ The accuracy on a test set of 500 pictures is 85%
 this project was done with me and https://github.com/MathieuBettinger
 
 <div align="center"><img src="https://github.com/manuteou/X-ray-COVID19-detection/blob/main/site1.png" alt="drawing" width="300"/>
-<img src="https://github.com/manuteou/X-ray-COVID19-detection/blob/main/site1.png" alt="drawing" width="300"/>
+<img src="https://github.com/manuteou/X-ray-COVID19-detection/blob/main/site2.png" alt="drawing" width="300"/>
