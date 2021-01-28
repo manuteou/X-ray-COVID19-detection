@@ -14,3 +14,4 @@ The accuracy on a test set of 500 pictures is 85%
 this project was done with me and https://github.com/MathieuBettinger
 
 <div align="center"><img src="https://github.com/manuteou/X-ray-COVID19-detection/blob/main/site1.png" alt="drawing" width="300"/>
+<img src="https://github.com/manuteou/X-ray-COVID19-detection/blob/main/site1.png" alt="drawing" width="300"/>
