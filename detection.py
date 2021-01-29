@@ -94,6 +94,7 @@ class detection:
         img = tf.keras.preprocessing.image.load_img(path, target_size=size)
         array = tf.keras.preprocessing.image.img_to_array(img)
         array = np.expand_dims(array, axis=0)
+
         return array
 
     def prediction_grad_cam(self, path, model):
@@ -102,10 +103,11 @@ class detection:
         img = tf.keras.preprocessing.image.load_img(path, target_size=img_size)
         preprocess_input = tf.keras.applications.xception.preprocess_input
         img_array = preprocess_input(self.get_img_array(path, img_size))
+     
         
         #we selected the last convolution layers
         #for model vgg19
-        last_conv_layer_name = "block5_conv3"
+        last_conv_layer_name = "block5_conv4"
         classifier_layer_names = ["block5_pool","sequential"]
         #for model densnet
         #last_conv_layer_name = "conv5_block16_concat"

@@ -16,6 +16,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = r"C:/Users/froge/Exo_jedha/PROJET/Site/static/Analyse/"
 MODEL_PATH = r"C:/Users/froge/Exo_jedha/PROJET/Site/models/model_VGG19.h5"
+#MODEL_PATH = r"C:/Users/froge/Exo_jedha/PROJET/Site/models/model_VGG16.h5"
 #MODEL_PATH = r"C:/Users/froge/Exo_jedha/PROJET/Site/models/model_DenseNet.h5"
 IMAGE_PATH = r"Analyse/"
 
@@ -65,7 +66,7 @@ def upload_files():
         file_path = Path(UPLOAD_FOLDER,filename)
         f.save(file_path)
 
-        #we do detection
+        #we crop image
         c = crop()
         img = c.crop(filename)
 
@@ -76,7 +77,8 @@ def upload_files():
         img.save(Path(UPLOAD_FOLDER, pred_crop_name))
 
         file_path = Path(UPLOAD_FOLDER,pred_crop_name)
-     
+
+        #we do detection
         d = detection()
         # we import timestamp to gave an unique id
         time = datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
