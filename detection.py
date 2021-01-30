@@ -107,11 +107,11 @@ class detection:
         
         #we selected the last convolution layers
         #for model vgg19
-        last_conv_layer_name = "block5_conv4"
-        classifier_layer_names = ["block5_pool","sequential"]
-        #for model densnet
-        #last_conv_layer_name = "conv5_block16_concat"
-        #classifier_layer_names = ["relu","sequential"]
+        #last_conv_layer_name = "block5_conv4"
+        #classifier_layer_names = ["block5_pool","sequential"]
+        #for model Xception
+        last_conv_layer_name = "block14_sepconv2_act"
+        classifier_layer_names = ["sequential"]
 
         #Generate class activation heatmap
         heatmap = self.make_gradcam_heatmap(
