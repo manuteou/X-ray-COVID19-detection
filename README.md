@@ -9,7 +9,7 @@ The model can predic if a patient is COVID positif, Viral Pneumonia positif or n
 
 The accuracy on train and validation is 95%
 
-The accuracy on a test set of 500 pictures is 85%
+The evaluate score on a test set of 500 pictures is 90%
 
 this project was done with me and https://github.com/MathieuBettinger
 
