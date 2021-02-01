@@ -28,26 +28,27 @@ def index():
         "https://coronavirusapi-france.now.sh/FranceLiveGlobalData")
         info = r.json()
     except:
-        return  render_template("index.html",date = 0, case = 0, hosp = 0, rea = 0, new = 0)  
-    try:
+        return  render_template("index.html",date = 0, case = 0, hosp = 0, rea = 0, new = 0) 
+         
+    if  info['FranceGlobalLiveData'][0]['date'] != None:
         info_date = info['FranceGlobalLiveData'][0]['date']
-    except KeyError:
+    else :
         info_date = 'NaN'
-    try:
+    if info['FranceGlobalLiveData'][0]['casConfirmes'] != None:
         info_ccase = f"{info['FranceGlobalLiveData'][0]['casConfirmes']:n}"
-    except KeyError:
+    else:
         info_ccase = 'NaN'
-    try:
+    if info['FranceGlobalLiveData'][0]['hospitalises'] != None:
         info_Hosp = f"{info['FranceGlobalLiveData'][0]['hospitalises']:n}"
-    except KeyError:
+    else:
         info_Hosp = 'NaN'
-    try:
+    if info['FranceGlobalLiveData'][0]['reanimation'] != None:
         info_rea = f"{info['FranceGlobalLiveData'][0]['reanimation']:n}"
-    except KeyError:
+    else:
         info_rea = 'NaN'   
-    try:
+    if info['FranceGlobalLiveData'][0]['nouvellesHospitalisations'] != None:
         info_new = f"{info['FranceGlobalLiveData'][0]['nouvellesHospitalisations']:n}"
-    except KeyError:
+    else:
         info_new = 'NaN'   
     
     return  render_template("index.html",date = info_date, case = info_ccase, hosp = info_Hosp, rea = info_rea, new = info_new)
@@ -55,7 +56,7 @@ def index():
 
 @app.route('/upload', methods=['GET','POST'])
 def upload_files():
-    # import of  VGG19'model
+    # import of  model
     model = tf.keras.models.load_model(MODEL_PATH)
 
     # image import
